@@ -34,14 +34,16 @@
     </div>
     <div class = 'form-questionnaire-area'>
         <div class = 'form-questionnaire-tab title-tab'>
-            <input value="Untitled Form" class = 'form-questionnaire-title-bar'>
+            <input value="Untitled form" class = 'form-questionnaire-title-bar'>
             <input placeholder="Form description" class = 'form-questionnaire-description-bar'>
         </div>
         <div class="form-questionnaire-tab">
             <div class = 'form-questionnaire-question-bar-container'>
                 <input class="form-questionnaire-question-bar" placeholder="Question">
                 <img src = './icons/image-icon.png' style="height: 32px;">
-                <div style="flex-basis: 150px; height: 45px; width: 250px; background-color: aliceblue; "></div>
+                <select class="form-questionnaire-type-dropdown">
+                    <option value='1'>Short Answer</option>
+                </select>
             </div>
             <p class = 'form-questionnaire-short-answer-bar'>Short answer text</p>
             <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
@@ -56,7 +58,9 @@
             <div class = 'form-questionnaire-question-bar-container'>
                 <input class="form-questionnaire-question-bar" placeholder="Question">
                 <img src = './icons/image-icon.png' style="height: 32px;">
-                <div style="flex-basis: 150px; height: 45px; width: 250px; background-color: aliceblue; "></div>
+                <select class="form-questionnaire-type-dropdown">
+                    <option value='1'>Paragraph</option>
+                </select>
             </div>
             <p class = 'form-questionnaire-long-answer-bar'>Long answer text</p>
             <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
@@ -71,7 +75,9 @@
             <div class = 'form-questionnaire-question-bar-container'>
                 <input class="form-questionnaire-question-bar" placeholder="Question">
                 <img src = './icons/image-icon.png' style="height: 32px;">
-                <div style="flex-basis: 150px; height: 45px; width: 250px; background-color: aliceblue; "></div>
+                <select class="form-questionnaire-type-dropdown">
+                    <option value='1'>Multiple choice</option>
+                </select>
             </div>
             <div class = 'form-questionnaire-option-container'>
                 <img src="./icons/circle-icon.png" style="height: 24px;">
@@ -103,7 +109,9 @@
             <div class = 'form-questionnaire-question-bar-container'>
                 <input class="form-questionnaire-question-bar" placeholder="Question">
                 <img src = './icons/image-icon.png' style="height: 32px;">
-                <div style="flex-basis: 150px; height: 45px; width: 250px; background-color: aliceblue; "></div>
+                <select class="form-questionnaire-type-dropdown">
+                    <option value='1'>Checkboxes</option>
+                </select>
             </div>
             <div class = 'form-questionnaire-option-container'>
                 <img src="./icons/square-icon.png" style="height: 24px;">
@@ -135,7 +143,9 @@
             <div class = 'form-questionnaire-question-bar-container'>
                 <input class="form-questionnaire-question-bar" placeholder="Question">
                 <img src = './icons/image-icon.png' style="height: 32px;">
-                <div style="flex-basis: 150px; height: 45px; width: 250px; background-color: aliceblue; "></div>
+                <select class="form-questionnaire-type-dropdown">
+                    <option value='1'>Dropdown</option>
+                </select>
             </div>
             <div class = 'form-questionnaire-option-container'>
                 <p style="font-size: 16px; margin: 0;">1.</p>
@@ -167,7 +177,9 @@
             <div class = 'form-questionnaire-question-bar-container'>
                 <input class="form-questionnaire-question-bar" placeholder="Question">
                 <img src = './icons/image-icon.png' style="height: 32px;">
-                <div style="flex-basis: 150px; height: 45px; width: 250px; background-color: aliceblue; "></div>
+                <select class="form-questionnaire-type-dropdown">
+                    <option value='1'>Date</option>
+                </select>
             </div>
             <div class = 'form-questionnaire-date-container'>
                 <p class = 'form-questionnaire-date-bar'>Month, Day, Year</p>
@@ -185,11 +197,52 @@
             <div class = 'form-questionnaire-question-bar-container'>
                 <input class="form-questionnaire-question-bar" placeholder="Question">
                 <img src = './icons/image-icon.png' style="height: 32px;">
-                <div style="flex-basis: 150px; height: 45px; width: 250px; background-color: aliceblue; "></div>
+                <select class="form-questionnaire-type-dropdown">
+                    <option value='1'>Time</option>
+                </select>
             </div>
             <div class = 'form-questionnaire-date-container'>
                 <p class = 'form-questionnaire-date-bar'>Time</p>
                 <img src="./icons/time-icon.png" style="height: 16px";/>
+            </div>
+            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <div class="form-questionnaire-tab-footer">
+                <img src="./icons/copy-icon.png" style="height: 24px";/>
+                <img src="./icons/delete-icon.png" style="height: 24px;"/>
+                <hr style="height:24px; width: 1px; margin: 0;">
+                <img src = "icons/dots-vertical-icon.png" style="height: 24px;">
+            </div>
+        </div>
+        <div class="form-questionnaire-tab">
+            <div class = 'form-questionnaire-question-bar-container'>
+                <input class="form-questionnaire-question-bar" placeholder="Question">
+                <img src = './icons/image-icon.png' style="height: 32px;">
+                <select class="form-questionnaire-type-dropdown">
+                    <option value='1'>File upload</option>
+                </select>
+            </div>
+            <div class = 'form-questionnaire-add-file-container'>
+                <div class = 'form-questionnaire-add-file-inner-container'>
+                    <p>Allow only specific file types</p>
+                </div>
+                <div class = 'form-questionnaire-add-file-inner-container'>
+                    <p>Maximum number of files</p>
+                    <select class="form-questionnaire-add-file-dropdown">
+                        <option value='1'>1</option>
+                        <option value='5'>5</option>
+                        <option value='10'>10</option>
+                      </select>
+                </div>
+                <div class = 'form-questionnaire-add-file-inner-container'>
+                    <p>Maximum file size</p>
+                    <select class="form-questionnaire-add-file-dropdown">
+                        <option value='1'>1 MB</option>
+                        <option value='1'>10 MB</option>
+                        <option value='1'>100 MB</option>
+                        <option value='1'>1 GB</option>
+                        <option value='1'>10 GB</option>
+                      </select>
+                </div>
             </div>
             <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
