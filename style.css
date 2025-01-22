@@ -201,7 +201,9 @@ body{
     justify-content: space-between;
 }
 
-.form-questionnaire-add-file-dropdown{
+.form-questionnaire-add-file-dropdown,
+.form-questionnaire-linear-scale-dropdown
+{
     border: none;
     outline: none;
 }
@@ -211,4 +213,49 @@ body{
     width: 200px;
     padding: 10px 10px;
     border-radius: 4px;
+}
+
+.form-questionnaire-linear-scale-container{
+    width: 200px
+}
+.form-questionnaire-linear-scale-inner-container-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.form-questionnaire-linear-scale-inner-container-2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-questionnaire-linear-scale-inner-label{
+    color: gray;
+    font-size: 16px;
+}
+
+.form-questionnaire-linear-scale-inner-textbox{
+    width: 150px;
+    background-color: white;
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+    font-size: 16px;;
+}
+
+.form-questionnaire-linear-scale-inner-textbox:focus{
+    border-bottom: 4px solid rgb(103,58,153);
+}
+
+.form-questionnaire-rating-dropdown{
+    border: 1px solid rgb(192, 192, 192);
+    padding: 12px 16px;
+    border-radius: 4px;
+}
+.form-questionnaire-rating-container-2 > div{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
 }
