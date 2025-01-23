@@ -6,18 +6,21 @@
     <title>Google Forms</title>
     <link rel = 'stylesheet' href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class = 'navbar'>
         <div class = 'upper-navbar'>
             <div class = 'upper-navbar-left'>
-                <img src = 'icons/forms-icon.svg' style="height: 40px;">
+                <img src = 'icons/forms-icon.svg' style="height: 2.5rem;">
                 <input type="text" class = 'title-textbox' value="Untitled Form">
                 <span class="material-symbols-outlined">folder</span>
                 <span class="material-symbols-outlined">star</span>
             </div>
             <div class = 'upper-navbar-right'>
-                <span class="material-symbols-outlined">palette</span>
+                <span class="material-symbols-outlined" id = 'palette-button'>palette</span>
                 <span class="material-symbols-outlined">visibility</span>
                 <span class="material-symbols-outlined">undo</span>
                 <span class="material-symbols-outlined">redo</span>
@@ -25,12 +28,116 @@
                 <span class="material-symbols-outlined">person_add</span>
                 <button class = 'publish-button'>Publish</button>
                 <span class="material-symbols-outlined">more_vert</span>
+                <span class="material-symbols-outlined">account_circle</span>
             </div>
         </div>
         <div class = 'lower-navbar'>
             <button class = 'lower-navbar-button lower-navbar-button-selected'>Questions</button>
             <button class = 'lower-navbar-button'>Responses</button>
             <button class = 'lower-navbar-button'>Settings</button>
+        </div>
+    </div>
+    <div class = 'theme-palette-sidebar'>
+        <div class = 'theme-palette-sidebar-header'>
+            <div class = 'theme-palette-sidebar-header-left'>
+                <span class = 'material-symbols-outlined'>palette</span>
+                <span>Theme</span>
+            </div>
+            <span class = 'material-symbols-outlined' id = 'close-palette-button'>close</span>
+        </div>
+        <div class = 'theme-palette-sidebar-section-1'>
+            <h5>Text Style</h5>
+            <div class = 'theme-palette-sidebar-section-1-subsection'>
+                <p>Header</p>
+                <div>
+                    <select style="flex-basis: 70%;">
+                        <option> Roboto </option>
+                        <option>Times new roman</option>
+                        <option> Lora </option>
+                        <option> Impact </option>
+                        <option> Comfortaa </option>
+                    </select>
+                    <select style="flex-basis: 20%;">
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                </div>
+            </div>
+            <div class = 'theme-palette-sidebar-section-1-subsection'>
+                <p>Question</p>
+                <div>
+                    <select style="flex-basis: 70%;">
+                        <option> Roboto </option>
+                        <option>Times new roman</option>
+                        <option> Lora </option>
+                        <option> Impact </option>
+                        <option> Comfortaa </option>
+                    </select>
+                    <select style="flex-basis: 20%;">
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                </div>
+            </div>
+            <div class = 'theme-palette-sidebar-section-1-subsection'>
+                <p>Text</p>
+                <div>
+                    <select style="flex-basis: 70%;">
+                        <option> Roboto </option>
+                        <option>Times new roman</option>
+                        <option> Lora </option>
+                        <option> Impact </option>
+                        <option> Comfortaa </option>
+                    </select>
+                    <select style="flex-basis: 20%;">
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class = 'theme-palette-sidebar-section-2'>
+            <h5>Header</h5>
+            <button class = 'theme-palette-siebar-choose-image-button'><span class = 'material-symbols-outlined' style="color: rgb(26, 115, 232);">image</span><span>Choose Image</span></button>
+        </div>
+        <div class = 'theme-palette-sidebar-section-3'>
+            <h5>Color</h5>
+            <div class="theme-palette-sidebar-color-grid">
+                <div style="background-color: #db4437;"></div>
+                <div style="background-color: #673ab7;"></div>
+                <div style="background-color: #3f51b5;"></div>
+                <div style="background-color: #4285f4;"></div>
+                <div style="background-color: #03a9f4;"></div>
+                <div style="background-color: #00bcd4;"></div>
+                <div style="background-color: #ff5722;"></div>
+                <div style="background-color: #ff9800;"></div>
+                <div style="background-color: #009688;"></div>
+                <div style="background-color: #4caf50;"></div>
+                <div style="background-color: #607d8b;"></div>
+                <div style="background-color: #9e9e9e;"></div>
+                <span class ='material-symbols-outlined' >add_circle</span>
+              </div>
+              <div class='theme-palette-sidebar-section-3-subsection'>
+                <p>Background</p>
+                <div>
+                    <div style="background-color: #F0ebf8;"></div>
+                    <div style="background-color: #e1d8f1;"></div>
+                    <div style="background-color: #d1c4e9;"></div>
+                    <div style="background-color: #f6f6f6;"></div>
+                  </div>
+              </div>
         </div>
     </div>
     <div class = 'form-questionnaire-area'>
@@ -47,11 +154,11 @@
                 </select>
             </div>
             <p class = 'form-questionnaire-short-answer-bar'>Short answer text</p>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -64,11 +171,11 @@
                 </select>
             </div>
             <p class = 'form-questionnaire-long-answer-bar'>Long answer text</p>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <hr style="height:.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -98,11 +205,17 @@
                 <span class="material-symbols-outlined">image</span>
                 <span class="material-symbols-outlined">close</span>
             </div>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <div class = 'form-questionnaire-option-container'>
+                <span class="material-symbols-outlined">radio_button_unchecked</span>
+                <p style="flex-grow: 1; margin: 0; font-size: 0.9rem"><span style="color: gray">Add option</span> or <span style="color: rgb(26, 115, 232)">add "Other"</span></p>
+                <span class="material-symbols-outlined">image</span>
+                <span class="material-symbols-outlined">close</span>
+            </div>
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -132,11 +245,17 @@
                 <span class="material-symbols-outlined">image</span>
                 <span class="material-symbols-outlined">close</span>
             </div>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <div class = 'form-questionnaire-option-container'>
+                <span class="material-symbols-outlined">check_box_outline_blank</span>
+                <p style="flex-grow: 1; margin: 0; font-size: 0.9rem"><span style="color: gray">Add option</span> or <span style="color: rgb(26, 115, 232)">add "Other"</span></p>
+                <span class="material-symbols-outlined">image</span>
+                <span class="material-symbols-outlined">close</span>
+            </div>
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -149,28 +268,34 @@
                 </select>
             </div>
             <div class = 'form-questionnaire-option-container'>
-                <p style="font-size: 16px; margin: 0;">1.</p>
+                <p style="font-size: 0.9rem; margin: 0;">1.</p>
                 <input class = 'form-questionnaire-option-bar' value="Option 1">
                 <span class="material-symbols-outlined">image</span>
                 <span class="material-symbols-outlined">close</span>
             </div>
             <div class = 'form-questionnaire-option-container'>
-                <p style="font-size: 16px; margin: 0;">2.</p>
+                <p style="font-size: 0.9rem; margin: 0;">2.</p>
                 <input class = 'form-questionnaire-option-bar' value="Option 2">
                 <span class="material-symbols-outlined">image</span>
                 <span class="material-symbols-outlined">close</span>
             </div>
             <div class = 'form-questionnaire-option-container'>
-                <p style="font-size: 16px; margin: 0;">3.</p>
+                <p style="font-size: 0.9rem; margin: 0;">3.</p>
                 <input class = 'form-questionnaire-option-bar' value="Option 3">
                 <span class="material-symbols-outlined">image</span>
                 <span class="material-symbols-outlined">close</span>
             </div>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <div class = 'form-questionnaire-option-container'>
+                <p style="font-size: 0.9rem; margin: 0;">4.</p>
+                <p style="flex-grow: 1; margin: 0; font-size: 0.9rem;"><span style="color: gray">Add option</span></p>
+                <span class="material-symbols-outlined">image</span>
+                <span class="material-symbols-outlined">close</span>
+            </div>
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -186,11 +311,11 @@
                 <p class = 'form-questionnaire-date-bar'>Month, Day, Year</p>
                 <span class="material-symbols-outlined">event</span>
             </div>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -206,11 +331,11 @@
                 <p class = 'form-questionnaire-date-bar'>Time</p>
                 <span class="material-symbols-outlined">schedule</span>
             </div>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -224,10 +349,10 @@
             </div>
             <div class = 'form-questionnaire-add-file-container'>
                 <div class = 'form-questionnaire-add-file-inner-container'>
-                    <p>Allow only specific file types</p>
+                    <p style="font-size: 0.9rem;">Allow only specific file types</p>
                 </div>
                 <div class = 'form-questionnaire-add-file-inner-container'>
-                    <p>Maximum number of files</p>
+                    <p style="font-size: 0.9rem;">Maximum number of files</p>
                     <select class="form-questionnaire-add-file-dropdown">
                         <option value='1'>1</option>
                         <option value='5'>5</option>
@@ -235,7 +360,7 @@
                       </select>
                 </div>
                 <div class = 'form-questionnaire-add-file-inner-container'>
-                    <p>Maximum file size</p>
+                    <p style="font-size: 0.9rem;">Maximum file size</p>
                     <select class="form-questionnaire-add-file-dropdown">
                         <option value='1'>1 MB</option>
                         <option value='1'>10 MB</option>
@@ -245,11 +370,18 @@
                       </select>
                 </div>
             </div>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <div class = 'form-questionnaire-add-file-container-2'>
+                <p style="margin: 0; font-size: 0.75rem; color: gray;">This form can accept upto 1 GB of files. <span style="color:rgb(26, 115, 232);">Change</span></p>
+                <div style="display: flex; align-items: center; gap: 0.625rem; color: rgb(26, 115, 232); font-size: 0.8rem;">
+                    <span class = 'material-symbols-outlined' style="color: rgb(26, 115, 232);">Add_to_drive</span> 
+                    <span>View folder</span>
+                </div>  
+            </div>
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -269,7 +401,7 @@
                         <option>3</option>
                         <option>4</option>
                     </select>
-                    <p>to</p>
+                    <p style="font-size: 0.9rem;">to</p>
                     <select class="form-questionnaire-linear-scale-dropdown">
                         <option>5</option>
                         <option>6</option>
@@ -288,11 +420,11 @@
                     <input type = 'text' class = 'form-questionnaire-linear-scale-inner-textbox' placeholder="Label (optional)">
                 </div>
             </div>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -335,11 +467,11 @@
                     <span class="material-symbols-outlined">star</span>
                 </div>
             </div>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -355,19 +487,23 @@
                 <div class = 'form-questionnaire-multiple-choice-grid-inner'>
                     <p style="font-weight: 900; margin:0;">Rows</p>
                     <div class = 'form-questionnaire-option-container'>
-                        <p style="font-size: 16px; margin: 0;">1.</p>
+                        <p style="font-size: 0.9rem; margin: 0;">1.</p>
                         <input class = 'form-questionnaire-option-bar' value="Row 1">
                         <span class="material-symbols-outlined">close</span>
                     </div>
                     <div class = 'form-questionnaire-option-container'>
-                        <p style="font-size: 16px; margin: 0;">2.</p>
+                        <p style="font-size: 0.9rem; margin: 0;">2.</p>
                         <input class = 'form-questionnaire-option-bar' value="Row 2">
                         <span class="material-symbols-outlined">close</span>
                     </div>
                     <div class = 'form-questionnaire-option-container'>
-                        <p style="font-size: 16px; margin: 0;">3.</p>
+                        <p style="font-size: 0.9rem; margin: 0;">3.</p>
                         <input class = 'form-questionnaire-option-bar' value="Row 3">
                         <span class="material-symbols-outlined">close</span>
+                    </div>
+                    <div class = 'form-questionnaire-option-container'>
+                        <p style="font-size: 0.9rem; margin: 0;">4.</p>
+                        <input class = 'form-questionnaire-option-bar' value="Add row" style="color: gray;">
                     </div>
                 </div>
                 <div class = 'form-questionnaire-multiple-choice-grid-inner'>
@@ -387,13 +523,17 @@
                         <input class = 'form-questionnaire-option-bar' value="Column 3">
                         <span class="material-symbols-outlined">close</span>
                     </div>
+                    <div class = 'form-questionnaire-option-container'>
+                        <span class="material-symbols-outlined">radio_button_unchecked</span>
+                        <input class = 'form-questionnaire-option-bar' value="Add columns" style="color: gray;">
+                    </div>
                 </div>
             </div>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
@@ -409,19 +549,23 @@
                 <div class = 'form-questionnaire-multiple-choice-grid-inner'>
                     <p style="font-weight: 900; margin:0;">Rows</p>
                     <div class = 'form-questionnaire-option-container'>
-                        <p style="font-size: 16px; margin: 0;">1.</p>
+                        <p style="font-size: 0.9rem; margin: 0;">1.</p>
                         <input class = 'form-questionnaire-option-bar' value="Row 1">
                         <span class="material-symbols-outlined">close</span>
                     </div>
                     <div class = 'form-questionnaire-option-container'>
-                        <p style="font-size: 16px; margin: 0;">2.</p>
+                        <p style="font-size: 0.9rem; margin: 0;">2.</p>
                         <input class = 'form-questionnaire-option-bar' value="Row 2">
                         <span class="material-symbols-outlined">close</span>
                     </div>
                     <div class = 'form-questionnaire-option-container'>
-                        <p style="font-size: 16px; margin: 0;">3.</p>
+                        <p style="font-size: 0.9rem; margin: 0;">3.</p>
                         <input class = 'form-questionnaire-option-bar' value="Row 3">
                         <span class="material-symbols-outlined">close</span>
+                    </div>
+                    <div class = 'form-questionnaire-option-container'>
+                        <p style="font-size: 0.9rem; margin: 0;">4.</p>
+                        <input class = 'form-questionnaire-option-bar' value="Add row" style="color: gray;">
                     </div>
                 </div>
                 <div class = 'form-questionnaire-multiple-choice-grid-inner'>
@@ -441,16 +585,35 @@
                         <input class = 'form-questionnaire-option-bar' value="Column 3">
                         <span class="material-symbols-outlined">close</span>
                     </div>
+                    <div class = 'form-questionnaire-option-container'>
+                        <span class="material-symbols-outlined">check_box_outline_blank</span>
+                        <input class = 'form-questionnaire-option-bar' value="Add column" style="color:gray">
+                    </div>
                 </div>
             </div>
-            <hr style="height:1px; width: 100%; border-color: rgb(218,220,224);">
+            <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
                 <span class="material-symbols-outlined">content_copy</span>
                 <span class="material-symbols-outlined">delete</span>
-                <hr style="height:24px; width: 1px; margin: 0;">
+                <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
                 <span class="material-symbols-outlined">more_vert</span>
             </div>
         </div>
     </div>
 </body> 
 </html>
+
+<script>
+    const paletteButton = document.querySelector('#palette-button');
+    const closePaletteButton = document.querySelector('#close-palette-button');
+    const themePaletteSidebar = document.querySelector('.theme-palette-sidebar');
+
+    paletteButton.addEventListener('click', () => {
+      themePaletteSidebar.style.display = 'block';
+    });
+  
+    closePaletteButton.addEventListener('click', () => {
+      themePaletteSidebar.style.display = 'none';
+    });
+  </script>
+  
