@@ -191,25 +191,14 @@
                 <span class="material-symbols-outlined">radio_button_unchecked</span>
                 <input class = 'form-questionnaire-option-bar' value="Option 1">
                 <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
+                <span class="material-symbols-outlined remove-option">close</span>
             </div>
             <div class = 'form-questionnaire-option-container'>
                 <span class="material-symbols-outlined">radio_button_unchecked</span>
-                <input class = 'form-questionnaire-option-bar' value="Option 2">
-                <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
-            </div>
-            <div class = 'form-questionnaire-option-container'>
-                <span class="material-symbols-outlined">radio_button_unchecked</span>
-                <input class = 'form-questionnaire-option-bar' value="Option 3">
-                <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
-            </div>
-            <div class = 'form-questionnaire-option-container'>
-                <span class="material-symbols-outlined">radio_button_unchecked</span>
-                <p style="flex-grow: 1; margin: 0; font-size: 0.9rem"><span style="color: gray">Add option</span> or <span style="color: rgb(26, 115, 232)">add "Other"</span></p>
-                <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
+                <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
+                    <span style="color: gray; cursor: pointer;" class="add-option">Add option</span>
+                    or <span style="color: rgb(26, 115, 232); cursor: pointer;">add "Other"</span>
+                </p>
             </div>
             <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
@@ -231,25 +220,14 @@
                 <span class="material-symbols-outlined">check_box_outline_blank</span>
                 <input class = 'form-questionnaire-option-bar' value="Option 1">
                 <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
+                <span class="material-symbols-outlined remove-option">close</span>
             </div>
             <div class = 'form-questionnaire-option-container'>
                 <span class="material-symbols-outlined">check_box_outline_blank</span>
-                <input class = 'form-questionnaire-option-bar' value="Option 2">
-                <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
-            </div>
-            <div class = 'form-questionnaire-option-container'>
-                <span class="material-symbols-outlined">check_box_outline_blank</span>
-                <input class = 'form-questionnaire-option-bar' value="Option 3">
-                <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
-            </div>
-            <div class = 'form-questionnaire-option-container'>
-                <span class="material-symbols-outlined">check_box_outline_blank</span>
-                <p style="flex-grow: 1; margin: 0; font-size: 0.9rem"><span style="color: gray">Add option</span> or <span style="color: rgb(26, 115, 232)">add "Other"</span></p>
-                <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
+                <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
+                    <span style="color: gray; cursor: pointer;" class="add-option">Add option</span>
+                    or <span style="color: rgb(26, 115, 232); cursor: pointer;">add "Other"</span>
+                </p>
             </div>
             <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
@@ -271,25 +249,14 @@
                 <p style="font-size: 0.9rem; margin: 0;">1.</p>
                 <input class = 'form-questionnaire-option-bar' value="Option 1">
                 <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
+                <span class="material-symbols-outlined remove-option">close</span>
             </div>
             <div class = 'form-questionnaire-option-container'>
                 <p style="font-size: 0.9rem; margin: 0;">2.</p>
-                <input class = 'form-questionnaire-option-bar' value="Option 2">
-                <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
-            </div>
-            <div class = 'form-questionnaire-option-container'>
-                <p style="font-size: 0.9rem; margin: 0;">3.</p>
-                <input class = 'form-questionnaire-option-bar' value="Option 3">
-                <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
-            </div>
-            <div class = 'form-questionnaire-option-container'>
-                <p style="font-size: 0.9rem; margin: 0;">4.</p>
-                <p style="flex-grow: 1; margin: 0; font-size: 0.9rem;"><span style="color: gray">Add option</span></p>
-                <span class="material-symbols-outlined">image</span>
-                <span class="material-symbols-outlined">close</span>
+                <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
+                    <span style="color: gray; cursor: pointer;" class="add-option">Add option</span>
+                    or <span style="color: rgb(26, 115, 232); cursor: pointer;">add "Other"</span>
+                  </p>
             </div>
             <hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             <div class="form-questionnaire-tab-footer">
@@ -609,28 +576,64 @@
     const themePaletteSidebar = document.querySelector('.theme-palette-sidebar');
 
     paletteButton.addEventListener('click', () => {
-      themePaletteSidebar.style.display = (themePaletteSidebar.style.display == 'block' ? 'none': 'block');
+        themePaletteSidebar.style.display = (themePaletteSidebar.style.display == 'block' ? 'none': 'block');
     });
   
     closePaletteButton.addEventListener('click', () => {
-      themePaletteSidebar.style.display = 'none';
+        themePaletteSidebar.style.display = 'none';
     });
 
     const colorDivs = document.querySelectorAll('.theme-palette-sidebar-color-grid div');
 
     colorDivs.forEach((div) => {
-    div.addEventListener('click', () => {
-        const color = window.getComputedStyle(div).backgroundColor;
-        document.documentElement.style.setProperty('--primary-color', color);
-    });
+        div.addEventListener('click', () => {
+            const color = window.getComputedStyle(div).backgroundColor;
+            document.documentElement.style.setProperty('--primary-color', color);
+        });
     });
 
     const backgroundColorDivs = document.querySelectorAll('.background-options-container div');
     backgroundColorDivs.forEach((div) => {
-    div.addEventListener('click', () => {
-        const color = window.getComputedStyle(div).backgroundColor;
-        document.documentElement.style.setProperty('--background-color', color);
+        div.addEventListener('click', () => {
+            const color = window.getComputedStyle(div).backgroundColor;
+            document.documentElement.style.setProperty('--background-color', color);
+        });
     });
-    });
-  </script>
+
+    const tabsContainer = document.querySelector(".form-questionnaire-area");
+
+	tabsContainer.addEventListener("click", (event) => {
+	if (event.target.classList.contains("add-option")) {
+		const parentTab = event.target.closest(".form-questionnaire-tab");
+		const optionContainers = parentTab.querySelectorAll(".form-questionnaire-option-container");
+		const addOptionContainer = event.target.closest(".form-questionnaire-option-container");
+		const lastOption = addOptionContainer.previousElementSibling;
+		if (!lastOption) return; 
+		const clonedOption = lastOption.cloneNode(true);
+		const inputField = clonedOption.querySelector(".form-questionnaire-option-bar");
+		const newOptionIndex = optionContainers.length; 
+		inputField.value = `Option ${newOptionIndex}`;
+		if (clonedOption.firstElementChild && clonedOption.firstElementChild.tagName.toLowerCase() === "p") {
+			clonedOption.firstElementChild.textContent = `${newOptionIndex}.`;
+		}
+		if (addOptionContainer.firstElementChild && addOptionContainer.firstElementChild.tagName.toLowerCase() === "p") {
+			addOptionContainer.firstElementChild.textContent = `${newOptionIndex + 1}.`;
+		}
+		parentTab.insertBefore(clonedOption, addOptionContainer);
+	}
+	else if(event.target.classList.contains('remove-option')){
+		const parentTab = event.target.closest(".form-questionnaire-tab");
+		let optionContainers = parentTab.querySelectorAll(".form-questionnaire-option-container");
+		if(optionContainers.length < 3) return;
+		const optionContainerTBD = event.target.closest(".form-questionnaire-option-container");
+		optionContainerTBD.remove();
+		optionContainers = parentTab.querySelectorAll(".form-questionnaire-option-container");
+		if (optionContainers[0].firstElementChild && optionContainers[0].firstElementChild.tagName.toLowerCase() === "p") {
+			for(let x = 0; x < optionContainers.length; x++){
+				optionContainers[x].firstElementChild.textContent = `${x+1}.`;
+			}
+		}
+	}
+});
+</script>
   
