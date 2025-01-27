@@ -31,7 +31,7 @@ body{
     background-color: white;
     padding: 0.3rem 1.8rem 0 1.8rem;
     border-bottom: 0.1rem solid var(--border-gray);
-    z-index: 1000;
+    z-index: 1;
 }
 .upper-navbar{
     height: 4.5rem;
@@ -140,16 +140,15 @@ body{
     justify-content: space-between;
     gap: 1.5rem;
 }
-
 .form-questionnaire-question-bar{
     flex-basis: 37.5rem;
     flex-grow: 1;
-    height: 3.5rem;
     background-color: var(--border-gray);
     border: none;
     border-bottom: 0.15rem solid gray;
     outline: none;
-    font-size: 1rem
+    font-size: 1rem;
+    padding: 1rem;
 }
 
 .form-questionnaire-option-bar{
@@ -297,12 +296,14 @@ body{
 
 .theme-palette-sidebar{
     width: 17rem;
-    height: 100%;
     position: fixed;
     right: 0;
+    height: 100%;
     background-color: white;
     border-right: 0.1rem solid var(--border-gray);
     box-shadow: 0px 0px 5px var(--border-gray);
+    overflow: auto;
+    z-index: 100;;
 }
 
 .theme-palette-sidebar-header{
