@@ -131,7 +131,7 @@
               </div>
               <div class='theme-palette-sidebar-section-3-subsection'>
                 <p>Background</p>
-                <div>
+                <div class = 'background-options-container'>
                     <div style="background-color: #F0ebf8;"></div>
                     <div style="background-color: #e1d8f1;"></div>
                     <div style="background-color: #d1c4e9;"></div>
@@ -614,6 +614,23 @@
   
     closePaletteButton.addEventListener('click', () => {
       themePaletteSidebar.style.display = 'none';
+    });
+
+    const colorDivs = document.querySelectorAll('.theme-palette-sidebar-color-grid div');
+
+    colorDivs.forEach((div) => {
+    div.addEventListener('click', () => {
+        const color = window.getComputedStyle(div).backgroundColor;
+        document.documentElement.style.setProperty('--primary-color', color);
+    });
+    });
+
+    const backgroundColorDivs = document.querySelectorAll('.background-options-container div');
+    backgroundColorDivs.forEach((div) => {
+    div.addEventListener('click', () => {
+        const color = window.getComputedStyle(div).backgroundColor;
+        document.documentElement.style.setProperty('--background-color', color);
+    });
     });
   </script>
   
