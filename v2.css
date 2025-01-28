@@ -140,15 +140,30 @@ body{
     justify-content: space-between;
     gap: 1.5rem;
 }
-.form-questionnaire-question-bar{
+.form-questionnaire-question-bar-container{
     flex-basis: 37.5rem;
     flex-grow: 1;
+}
+
+.form-questionnaire-question-bar{
+    width: 100%;
     background-color: var(--border-gray);
     border: none;
     border-bottom: 0.15rem solid gray;
     outline: none;
     font-size: 1rem;
     padding: 1rem;
+}
+
+.form-questionnaire-question-bar:focus + .form-questionnaire-question-bar-formating-options {
+    display: flex;
+}
+
+.form-questionnaire-question-bar-formating-options{
+    display: none;
+    padding:0.5rem;
+    gap: 1rem;
+
 }
 
 .form-questionnaire-tab-content-area{
