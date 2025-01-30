@@ -41,7 +41,7 @@ body{
     gap:2rem;
 }
 
-.title-textbox{
+.form-name-textbox{
     border: none;
     height: 1.75rem;
     max-width: 11rem;
@@ -52,7 +52,7 @@ body{
     color: var(--font-gray)
 }
 
-.title-textbox:focus{
+.form-name-textbox:focus{
     border: none;
     outline: none;
     border-bottom: 0.15rem solid black; 

@@ -47,7 +47,7 @@ export const templateMap = {
             <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
                 <span style="color: gray; cursor: pointer;" class="add-option">Add option</span>
                 or <span style="color: rgb(26, 115, 232); cursor: pointer;">add "Other"</span>
-                </p>
+            </p>
         </div>
     `,
     "add-file": `
@@ -155,17 +155,9 @@ export const templateMap = {
                 </div>
                 <div class = 'form-questionnaire-option-container'>
                     <p style="font-size: 0.9rem; margin: 0;">2.</p>
-                    <input class = 'form-questionnaire-option-bar' value="Row 2">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <p style="font-size: 0.9rem; margin: 0;">3.</p>
-                    <input class = 'form-questionnaire-option-bar' value="Row 3">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <p style="font-size: 0.9rem; margin: 0;">4.</p>
-                    <input class = 'form-questionnaire-option-bar' value="Add row" style="color: gray;">
+                    <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
+                        <span style="color: gray; cursor: pointer;" class="add-row">Add row</span>
+                    </p>
                 </div>
             </div>
             <div class = 'form-questionnaire-multiple-choice-grid-inner'>
@@ -187,7 +179,9 @@ export const templateMap = {
                 </div>
                 <div class = 'form-questionnaire-option-container'>
                     <span class="material-symbols-outlined">radio_button_unchecked</span>
-                    <input class = 'form-questionnaire-option-bar' value="Add columns" style="color: gray;">
+                    <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
+                        <span style="color: gray; cursor: pointer;" class="add-row">Add column</span>
+                    </p>
                 </div>
             </div>
         </div>

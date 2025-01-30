@@ -4,7 +4,7 @@
     --secondary-color:rgb(26, 115, 232);
     --font-gray: rgb(32, 33, 36);
     --border-gray: rgb(218,220,224);
-  }
+}
 
 *{
     box-sizing: border-box;
@@ -41,7 +41,7 @@ body{
     gap:2rem;
 }
 
-.title-textbox{
+.form-name-textbox{
     border: none;
     height: 1.75rem;
     max-width: 11rem;
@@ -52,7 +52,7 @@ body{
     color: var(--font-gray)
 }
 
-.title-textbox:focus{
+.form-name-textbox:focus{
     border: none;
     outline: none;
     border-bottom: 0.15rem solid black; 
@@ -110,7 +110,6 @@ body{
     flex-direction: column;
     gap: 1.5rem;
 }
-
 
 .title-tab{
     border-top: 0.5rem solid var(--primary-color);
