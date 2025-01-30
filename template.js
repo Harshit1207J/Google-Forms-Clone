@@ -1,4 +1,4 @@
-export const templateMap = {
+const templateMap = {
     "short-answer": `
       <p class="form-questionnaire-short-answer-bar">Short answer text</p>
     `,
@@ -6,12 +6,6 @@ export const templateMap = {
       <p class="form-questionnaire-long-answer-bar">Long answer text</p>
     `,
     "multiple-choice": `
-      <div class="form-questionnaire-option-container">
-        <span class="material-symbols-outlined">radio_button_unchecked</span>
-        <input class="form-questionnaire-option-bar" value="Option 1">
-        <span class="material-symbols-outlined">image</span>
-        <span class="material-symbols-outlined remove-option">close</span>
-      </div>
       <div class="form-questionnaire-option-container">
         <span class="material-symbols-outlined">radio_button_unchecked</span>
         <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
@@ -23,12 +17,6 @@ export const templateMap = {
     "checkboxes": `
         <div class = 'form-questionnaire-option-container'>
             <span class="material-symbols-outlined">check_box_outline_blank</span>
-            <input class = 'form-questionnaire-option-bar' value="Option 1">
-            <span class="material-symbols-outlined">image</span>
-            <span class="material-symbols-outlined remove-option">close</span>
-        </div>
-        <div class = 'form-questionnaire-option-container'>
-            <span class="material-symbols-outlined">check_box_outline_blank</span>
             <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
                 <span style="color: gray; cursor: pointer;" class="add-option">Add option</span>
                 or <span style="color: rgb(26, 115, 232); cursor: pointer;">add "Other"</span>
@@ -38,16 +26,10 @@ export const templateMap = {
     "dropdown": `
         <div class = 'form-questionnaire-option-container'>
             <p style="font-size: 0.9rem; margin: 0;">1.</p>
-            <input class = 'form-questionnaire-option-bar' value="Option 1">
-            <span class="material-symbols-outlined">image</span>
-            <span class="material-symbols-outlined remove-option">close</span>
-        </div>
-        <div class = 'form-questionnaire-option-container'>
-            <p style="font-size: 0.9rem; margin: 0;">2.</p>
             <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
                 <span style="color: gray; cursor: pointer;" class="add-option">Add option</span>
                 or <span style="color: rgb(26, 115, 232); cursor: pointer;">add "Other"</span>
-            </p>
+                </p>
         </div>
     `,
     "add-file": `
@@ -150,8 +132,8 @@ export const templateMap = {
                 <p style="font-weight: 900; margin:0;">Rows</p>
                 <div class = 'form-questionnaire-option-container'>
                     <p style="font-size: 0.9rem; margin: 0;">1.</p>
-                    <input class = 'form-questionnaire-option-bar' value="Row 1">
-                    <span class="material-symbols-outlined">close</span>
+                    <input class = 'form-questionnaire-option-bar' value="New row">
+                    <span class="material-symbols-outlined remove-row">close</span>
                 </div>
                 <div class = 'form-questionnaire-option-container'>
                     <p style="font-size: 0.9rem; margin: 0;">2.</p>
@@ -164,23 +146,13 @@ export const templateMap = {
                 <p style="font-weight: 900; margin:0;">Column</p>
                 <div class = 'form-questionnaire-option-container'>
                     <span class="material-symbols-outlined">radio_button_unchecked</span>
-                    <input class = 'form-questionnaire-option-bar' value="Column 1">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <span class="material-symbols-outlined">radio_button_unchecked</span>
-                    <input class = 'form-questionnaire-option-bar' value="Column 2">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <span class="material-symbols-outlined">radio_button_unchecked</span>
-                    <input class = 'form-questionnaire-option-bar' value="Column 3">
-                    <span class="material-symbols-outlined">close</span>
+                    <input class = 'form-questionnaire-option-bar' value="New column">
+                    <span class="material-symbols-outlined remove-row">close</span>
                 </div>
                 <div class = 'form-questionnaire-option-container'>
                     <span class="material-symbols-outlined">radio_button_unchecked</span>
                     <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
-                        <span style="color: gray; cursor: pointer;" class="add-row">Add column</span>
+                        <span style="color: gray; cursor: pointer;" class="add-column-multiple-choice">Add column</span>
                     </p>
                 </div>
             </div>
@@ -192,44 +164,28 @@ export const templateMap = {
                 <p style="font-weight: 900; margin:0;">Rows</p>
                 <div class = 'form-questionnaire-option-container'>
                     <p style="font-size: 0.9rem; margin: 0;">1.</p>
-                    <input class = 'form-questionnaire-option-bar' value="Row 1">
-                    <span class="material-symbols-outlined">close</span>
+                    <input class = 'form-questionnaire-option-bar' value="New row">
+                    <span class="material-symbols-outlined remove-row">close</span>
                 </div>
                 <div class = 'form-questionnaire-option-container'>
                     <p style="font-size: 0.9rem; margin: 0;">2.</p>
-                    <input class = 'form-questionnaire-option-bar' value="Row 2">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <p style="font-size: 0.9rem; margin: 0;">3.</p>
-                    <input class = 'form-questionnaire-option-bar' value="Row 3">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <p style="font-size: 0.9rem; margin: 0;">4.</p>
-                    <input class = 'form-questionnaire-option-bar' value="Add row" style="color: gray;">
+                    <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
+                        <span style="color: gray; cursor: pointer;" class="add-row">Add row</span>
+                    </p>
                 </div>
             </div>
             <div class = 'form-questionnaire-multiple-choice-grid-inner'>
                 <p style="font-weight: 900; margin:0;">Column</p>
                 <div class = 'form-questionnaire-option-container'>
                     <span class="material-symbols-outlined">check_box_outline_blank</span>
-                    <input class = 'form-questionnaire-option-bar' value="Column 1">
-                    <span class="material-symbols-outlined">close</span>
+                    <input class = 'form-questionnaire-option-bar' value="New column">
+                    <span class="material-symbols-outlined remove-row">close</span>
                 </div>
                 <div class = 'form-questionnaire-option-container'>
                     <span class="material-symbols-outlined">check_box_outline_blank</span>
-                    <input class = 'form-questionnaire-option-bar' value="Column 2">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <span class="material-symbols-outlined">check_box_outline_blank</span>
-                    <input class = 'form-questionnaire-option-bar' value="Column 3">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <span class="material-symbols-outlined">check_box_outline_blank</span>
-                    <input class = 'form-questionnaire-option-bar' value="Add column" style="color:gray">
+                    <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
+                        <span style="color: gray; cursor: pointer;" class="add-column-checkboxes">Add Column</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -247,3 +203,77 @@ export const templateMap = {
         </div>
     `,
 };
+
+const templateOptionsMap = {
+    'multiple-choice': `
+        <span class="material-symbols-outlined">radio_button_unchecked</span>
+        <input class="form-questionnaire-option-bar" value="New option">
+        <span class="material-symbols-outlined">image</span>
+        <span class="material-symbols-outlined remove-option">close</span>
+    `,
+    'checkboxes': `
+        <span class="material-symbols-outlined">check_box_outline_blank</span>
+        <input class = 'form-questionnaire-option-bar' value="New option">
+        <span class="material-symbols-outlined">image</span>
+        <span class="material-symbols-outlined remove-option">close</span>
+    `,
+    'dropdown': `
+        <p style="font-size: 0.9rem; margin: 0;">1.</p>
+        <input class = 'form-questionnaire-option-bar' value="New option">
+        <span class="material-symbols-outlined">image</span>
+        <span class="material-symbols-outlined remove-option">close</span>
+    `,
+    'grid-row':`
+        <p style="font-size: 0.9rem; margin: 0;">1.</p>
+        <input class = 'form-questionnaire-option-bar' value="New row">
+        <span class="material-symbols-outlined remove-option">close</span>
+    `,
+    'grid-column-multiple-choice': `
+        <span class="material-symbols-outlined">radio_button_unchecked</span>
+        <input class="form-questionnaire-option-bar" value="New column">
+        <span class="material-symbols-outlined remove-option">close</span>
+    `,
+    'grid-column-checkboxes': `
+        <span class="material-symbols-outlined">check_box_outline_blank</span>
+        <input class = 'form-questionnaire-option-bar' value="New column">
+        <span class="material-symbols-outlined remove-option">close</span>
+    `
+}
+const tabHeader = `
+    <div class = 'form-questionnaire-tab-header'>
+		<div class = 'form-questionnaire-question-bar-container'>
+			<input class="form-questionnaire-question-bar" placeholder="Question">
+			<div class = 'form-questionnaire-question-bar-formating-options'>
+				<span class = 'material-symbols-outlined'>format_bold</span>
+				<span class = 'material-symbols-outlined'>format_italic</span>
+				<span class = 'material-symbols-outlined'>format_underlined</span>
+				<span class = 'material-symbols-outlined'>link</span>
+				<span class = 'material-symbols-outlined'>format_clear</span>
+			</div>
+		</div>
+        <span class="material-symbols-outlined">image</span>
+        <select class="form-questionnaire-type-dropdown">
+            <option value = 'short-answer'>Short Answer</option>
+            <option value = 'long-answer'>Paragraph</option>
+            <option value = 'multiple-choice'>Multiple Choice</option>
+            <option value = 'checkboxes'>CheckBox</option>
+            <option value = 'dropdown'>Dropdown</option>
+            <option value = 'add-file'>File Upload</option>
+            <option value = 'linear'>Linear Scale</option>
+            <option value = 'rating'>Rating</option>
+            <option value = 'multiple-choice-grid'>Multiple Choice Grid</option>
+            <option value = 'checkbox-grid'>Checkbox Grid</option>
+            <option value = 'date'>Date</option>
+            <option value = 'time'>Time</option>
+        </select>
+    </div>
+`;
+const tabFooter = `
+    <div class="form-questionnaire-tab-footer">
+        <span class="material-symbols-outlined duplicate-tab">content_copy</span>
+        <span class="material-symbols-outlined delete-tab">delete</span>
+        <span class="material-symbols-outlined add-tab">add</span>
+        <hr style="height:1.5rem; width: 0.1rem; margin: 0;">
+        <span class="material-symbols-outlined">more_vert</span>
+    </div>
+`;

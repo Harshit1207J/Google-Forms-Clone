@@ -8,12 +8,6 @@ const templateMap = {
     "multiple-choice": `
       <div class="form-questionnaire-option-container">
         <span class="material-symbols-outlined">radio_button_unchecked</span>
-        <input class="form-questionnaire-option-bar" value="Option 1">
-        <span class="material-symbols-outlined">image</span>
-        <span class="material-symbols-outlined remove-option">close</span>
-      </div>
-      <div class="form-questionnaire-option-container">
-        <span class="material-symbols-outlined">radio_button_unchecked</span>
         <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
           <span style="color: gray; cursor: pointer;" class="add-option">Add option</span>
           or <span style="color: rgb(26, 115, 232); cursor: pointer;">add "Other"</span>
@@ -21,12 +15,6 @@ const templateMap = {
       </div>
     `,
     "checkboxes": `
-        <div class = 'form-questionnaire-option-container'>
-            <span class="material-symbols-outlined">check_box_outline_blank</span>
-            <input class = 'form-questionnaire-option-bar' value="Option 1">
-            <span class="material-symbols-outlined">image</span>
-            <span class="material-symbols-outlined remove-option">close</span>
-        </div>
         <div class = 'form-questionnaire-option-container'>
             <span class="material-symbols-outlined">check_box_outline_blank</span>
             <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
@@ -38,12 +26,6 @@ const templateMap = {
     "dropdown": `
         <div class = 'form-questionnaire-option-container'>
             <p style="font-size: 0.9rem; margin: 0;">1.</p>
-            <input class = 'form-questionnaire-option-bar' value="Option 1">
-            <span class="material-symbols-outlined">image</span>
-            <span class="material-symbols-outlined remove-option">close</span>
-        </div>
-        <div class = 'form-questionnaire-option-container'>
-            <p style="font-size: 0.9rem; margin: 0;">2.</p>
             <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
                 <span style="color: gray; cursor: pointer;" class="add-option">Add option</span>
                 or <span style="color: rgb(26, 115, 232); cursor: pointer;">add "Other"</span>
@@ -150,11 +132,6 @@ const templateMap = {
                 <p style="font-weight: 900; margin:0;">Rows</p>
                 <div class = 'form-questionnaire-option-container'>
                     <p style="font-size: 0.9rem; margin: 0;">1.</p>
-                    <input class = 'form-questionnaire-option-bar' value="Row 1">
-                    <span class="material-symbols-outlined remove-row">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <p style="font-size: 0.9rem; margin: 0;">2.</p>
                     <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
                         <span style="color: gray; cursor: pointer;" class="add-row">Add row</span>
                     </p>
@@ -164,13 +141,8 @@ const templateMap = {
                 <p style="font-weight: 900; margin:0;">Column</p>
                 <div class = 'form-questionnaire-option-container'>
                     <span class="material-symbols-outlined">radio_button_unchecked</span>
-                    <input class = 'form-questionnaire-option-bar' value="Column 1">
-                    <span class="material-symbols-outlined remove-row">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <span class="material-symbols-outlined">radio_button_unchecked</span>
                     <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
-                        <span style="color: gray; cursor: pointer;" class="add-row">Add column</span>
+                        <span style="color: gray; cursor: pointer;" class="add-column-multiple-choice">Add column</span>
                     </p>
                 </div>
             </div>
@@ -182,11 +154,6 @@ const templateMap = {
                 <p style="font-weight: 900; margin:0;">Rows</p>
                 <div class = 'form-questionnaire-option-container'>
                     <p style="font-size: 0.9rem; margin: 0;">1.</p>
-                    <input class = 'form-questionnaire-option-bar' value="Row 1">
-                    <span class="material-symbols-outlined remove-row">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <p style="font-size: 0.9rem; margin: 0;">2.</p>
                     <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
                         <span style="color: gray; cursor: pointer;" class="add-row">Add row</span>
                     </p>
@@ -196,13 +163,8 @@ const templateMap = {
                 <p style="font-weight: 900; margin:0;">Column</p>
                 <div class = 'form-questionnaire-option-container'>
                     <span class="material-symbols-outlined">check_box_outline_blank</span>
-                    <input class = 'form-questionnaire-option-bar' value="Column 1">
-                    <span class="material-symbols-outlined remove-row">close</span>
-                </div>
-                <div class = 'form-questionnaire-option-container'>
-                    <span class="material-symbols-outlined">check_box_outline_blank</span>
                     <p style="flex-grow: 1; margin: 0; font-size: 0.9rem">
-                        <span style="color: gray; cursor: pointer;" class="add-row">Add Column</span>
+                        <span style="color: gray; cursor: pointer;" class="add-column-checkboxes">Add Column</span>
                     </p>
                 </div>
             </div>
@@ -224,30 +186,38 @@ const templateMap = {
 
 const templateOptionsMap = {
     'multiple-choice': `
-      <div class="form-questionnaire-option-container">
         <span class="material-symbols-outlined">radio_button_unchecked</span>
-        <input class="form-questionnaire-option-bar" value="Option 1">
+        <input class="form-questionnaire-option-bar" value="New option">
         <span class="material-symbols-outlined">image</span>
         <span class="material-symbols-outlined remove-option">close</span>
-      </div>
     `,
     'checkboxes': `
-        <div class = 'form-questionnaire-option-container'>
-            <span class="material-symbols-outlined">check_box_outline_blank</span>
-            <input class = 'form-questionnaire-option-bar' value="Option 1">
-            <span class="material-symbols-outlined">image</span>
-            <span class="material-symbols-outlined remove-option">close</span>
-        </div>
+        <span class="material-symbols-outlined">check_box_outline_blank</span>
+        <input class = 'form-questionnaire-option-bar' value="New option">
+        <span class="material-symbols-outlined">image</span>
+        <span class="material-symbols-outlined remove-option">close</span>
     `,
     'dropdown': `
-        <div class = 'form-questionnaire-option-container'>
-            <p style="font-size: 0.9rem; margin: 0;">1.</p>
-            <input class = 'form-questionnaire-option-bar' value="Option 1">
-            <span class="material-symbols-outlined">image</span>
-            <span class="material-symbols-outlined remove-option">close</span>
-        </div>
+        <p style="font-size: 0.9rem; margin: 0;">1.</p>
+        <input class = 'form-questionnaire-option-bar' value="New option">
+        <span class="material-symbols-outlined">image</span>
+        <span class="material-symbols-outlined remove-option">close</span>
+    `,
+    'grid-row':`
+        <p style="font-size: 0.9rem; margin: 0;">1.</p>
+        <input class = 'form-questionnaire-option-bar' value="New row">
+        <span class="material-symbols-outlined remove-row">close</span>
+    `,
+    'grid-column-multiple-choice': `
+        <span class="material-symbols-outlined">radio_button_unchecked</span>
+        <input class="form-questionnaire-option-bar" value="New column">
+        <span class="material-symbols-outlined remove-option">close</span>
+    `,
+    'grid-column-checkboxes': `
+        <span class="material-symbols-outlined">check_box_outline_blank</span>
+        <input class = 'form-questionnaire-option-bar' value="New column">
+        <span class="material-symbols-outlined remove-option">close</span>
     `
-
 }
 const tabHeader = `
     <div class = 'form-questionnaire-tab-header'>
@@ -266,7 +236,7 @@ const tabHeader = `
             <option value = 'short-answer'>Short Answer</option>
             <option value = 'long-answer'>Paragraph</option>
             <option value = 'multiple-choice'>Multiple Choice</option>
-            <option value = 'checkboxes'>CheckBoxes</option>
+            <option value = 'checkboxes'>CheckBox</option>
             <option value = 'dropdown'>Dropdown</option>
             <option value = 'add-file'>File Upload</option>
             <option value = 'linear'>Linear Scale</option>
@@ -337,76 +307,83 @@ document.addEventListener("change", (event) => {
 	});
 }
 
-const tabsContainer = document.querySelector(".form-questionnaire-area");
+const form = document.querySelector(".form-questionnaire-area");
 
-tabsContainer.addEventListener("click", (event) => {
-    console.log(event);
+form.addEventListener("click", (event) => {
     if (event.target.classList.contains("add-option")) {
-        const parentTab = event.target.closest(".form-questionnaire-tab-content-area");
-        const optionContainers = parentTab.querySelectorAll(".form-questionnaire-option-container");
-        const addOptionContainer = event.target.closest(".form-questionnaire-option-container");
-        const lastOption = addOptionContainer.previousElementSibling;
-        if (!lastOption) return; 
-        const clonedOption = lastOption.cloneNode(true);
-        const inputField = clonedOption.querySelector(".form-questionnaire-option-bar");
-        const newOptionIndex = optionContainers.length; 
-        inputField.value = `Option ${newOptionIndex}`;
-        if (clonedOption.firstElementChild && clonedOption.firstElementChild.tagName.toLowerCase() === "p") {
-            clonedOption.firstElementChild.textContent = `${newOptionIndex}.`;
+        const tab = event.target.closest('.form-questionnaire-tab');
+        const contentArea = event.target.closest('.form-questionnaire-tab-content-area');
+        const type = tab.firstElementChild.lastElementChild.value;
+        const newOptionsContainer = document.createElement('div');
+        newOptionsContainer.classList.add('form-questionnaire-option-container');
+        newOptionsContainer.innerHTML = templateOptionsMap[type];
+        contentArea.insertBefore(newOptionsContainer, contentArea.lastElementChild);
+        if(type === 'dropdown'){
+            const allOptions = contentArea.querySelectorAll('.form-questionnaire-option-container');
+            let count = 1;
+            console.log(allOptions);
+            for(let option of allOptions){
+                option.firstElementChild.innerHTML = `${count++}.`;
+            }
         }
-        if (addOptionContainer.firstElementChild && addOptionContainer.firstElementChild.tagName.toLowerCase() === "p") {
-            addOptionContainer.firstElementChild.textContent = `${newOptionIndex + 1}.`;
-        }
-        parentTab.insertBefore(clonedOption, addOptionContainer);
     }
     else if(event.target.classList.contains('remove-option')){
-        const parentTab = event.target.closest(".form-questionnaire-tab-content-area");
-        let optionContainers = parentTab.querySelectorAll(".form-questionnaire-option-container");
-        if(optionContainers.length < 3) return;
         const optionContainerTBD = event.target.closest(".form-questionnaire-option-container");
+        const tab = event.target.closest('.form-questionnaire-tab');
+        const contentArea = event.target.closest('.form-questionnaire-tab-content-area');
+        const type = tab.firstElementChild.lastElementChild.value;
         optionContainerTBD.remove();
-        optionContainers = parentTab.querySelectorAll(".form-questionnaire-option-container");
-        if (optionContainers[0].firstElementChild && optionContainers[0].firstElementChild.tagName.toLowerCase() === "p") {
-            for(let x = 0; x < optionContainers.length; x++){
-                optionContainers[x].firstElementChild.textContent = `${x+1}.`;
+        if(type === 'dropdown'){
+            const allOptions = contentArea.querySelectorAll('.form-questionnaire-option-container');
+            let count = 1;
+            console.log(allOptions);
+            for(let option of allOptions){
+                option.firstElementChild.innerHTML = `${count++}.`;
             }
         }
     }
     else if (event.target.classList.contains("add-row")) {
-        const parentTab = event.target.closest(".form-questionnaire-multiple-choice-grid-inner");
-        const optionContainers = parentTab.querySelectorAll(".form-questionnaire-option-container");
-		const heading = parentTab.firstElementChild.innerHTML;
-        const addOptionContainer = event.target.closest(".form-questionnaire-option-container");
-        const lastOption = addOptionContainer.previousElementSibling;
-        if (!lastOption) return; 
-        const clonedOption = lastOption.cloneNode(true);
-        const inputField = clonedOption.querySelector(".form-questionnaire-option-bar");
-        const newOptionIndex = optionContainers.length; 
-        inputField.value = heading === 'Rows' ? `Row ${newOptionIndex}` : `Column ${newOptionIndex}`;
-        if (clonedOption.firstElementChild && clonedOption.firstElementChild.tagName.toLowerCase() === "p") {
-            clonedOption.firstElementChild.textContent = `${newOptionIndex}.`;
+        const parent = event.target.closest('.form-questionnaire-multiple-choice-grid-inner');
+        const newRow = document.createElement('div');
+        newRow.classList.add('form-questionnaire-option-container')
+        newRow.innerHTML = templateOptionsMap['grid-row'];
+        parent.insertBefore(newRow , parent.lastElementChild);
+        const allOptions = parent.querySelectorAll('.form-questionnaire-option-container');
+        let count = 1;
+        for(let option of allOptions){
+            option.firstElementChild.innerHTML = `${count++}.`;
         }
-        if (addOptionContainer.firstElementChild && addOptionContainer.firstElementChild.tagName.toLowerCase() === "p") {
-            addOptionContainer.firstElementChild.textContent = `${newOptionIndex + 1}.`;
-        }
-        parentTab.insertBefore(clonedOption, addOptionContainer);
+    }
+    else if(event.target.classList.contains('add-column-multiple-choice')){
+        const parent = event.target.closest('.form-questionnaire-multiple-choice-grid-inner');
+        const newRow = document.createElement('div');
+        newRow.classList.add('form-questionnaire-option-container')
+        newRow.innerHTML = templateOptionsMap['grid-column-multiple-choice'];
+        parent.insertBefore(newRow , parent.lastElementChild);
+    }
+    else if(event.target.classList.contains('add-column-checkboxes')){
+        const parent = event.target.closest('.form-questionnaire-multiple-choice-grid-inner');
+        const newRow = document.createElement('div');
+        newRow.classList.add('form-questionnaire-option-container')
+        newRow.innerHTML = templateOptionsMap['grid-column-checkboxes'];
+        parent.insertBefore(newRow , parent.lastElementChild);
     }
     else if(event.target.classList.contains('remove-row')){
-        const parentTab = event.target.closest(".form-questionnaire-multiple-choice-grid-inner");
-        let optionContainers = parentTab.querySelectorAll(".form-questionnaire-option-container");
-        if(optionContainers.length < 3) return;
-        const optionContainerTBD = event.target.closest(".form-questionnaire-option-container");
-        optionContainerTBD.remove();
-        optionContainers = parentTab.querySelectorAll(".form-questionnaire-option-container");
-        if (optionContainers[0].firstElementChild && optionContainers[0].firstElementChild.tagName.toLowerCase() === "p") {
-            for(let x = 0; x < optionContainers.length; x++){
-                optionContainers[x].firstElementChild.textContent = `${x+1}.`;
-            }
+        const parent = event.target.closest('.form-questionnaire-multiple-choice-grid-inner');
+        const giveOption = event.target.closest('.form-questionnaire-option-container');
+        giveOption.remove();
+        const allOptions = parent.querySelectorAll('.form-questionnaire-option-container');
+        let count = 1;
+        for(let option of allOptions){
+            option.firstElementChild.innerHTML = `${count++}.`;
         }
+    }
+    else if(event.target.classList.contains('remove-column')){
+        const giveOption = event.target.closest('.form-questionnaire-option-container');
+        giveOption.remove();
     }
     else if (event.target.classList.contains('add-tab')) {
         const givenTab = event.target.closest(".form-questionnaire-tab");
-        const parentTab = document.querySelector('.form-questionnaire-area');
         const newTab = document.createElement('div');
         newTab.classList.add('form-questionnaire-tab');
         newTab.innerHTML = `
@@ -417,19 +394,16 @@ tabsContainer.addEventListener("click", (event) => {
 			<hr style="height:0.1rem; width: 100%; border-color: rgb(218,220,224);">
             ${tabFooter}
         `;
-        parentTab.insertBefore(newTab, givenTab.nextSibling);
+        form.insertBefore(newTab, givenTab.nextSibling);
     }
     else if (event.target.classList.contains('delete-tab')) {
+        if(form.children.length === 2) return;
         const givenTab = event.target.closest(".form-questionnaire-tab");
-        const parentTab = document.querySelector('.form-questionnaire-area');
-        console.log(parentTab.children);
-        if(parentTab.children.length === 2) return;
         givenTab.remove();
     }
     else if (event.target.classList.contains('duplicate-tab')) {
         const givenTab = event.target.closest(".form-questionnaire-tab");
-        const parentTab = document.querySelector('.form-questionnaire-area');
         const clonedTab = givenTab.cloneNode(true);
-        parentTab.insertBefore(clonedTab, givenTab.nextSibling);
+        form.insertBefore(clonedTab, givenTab.nextSibling);
     }
 });

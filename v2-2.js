@@ -7,6 +7,16 @@ const sample_data = {
             'type': 'short-answer',
             'question': 'question 1'
         },
+        {
+            'type': 'multiple-choice',
+            'question': 'question 2',
+            'options': ['option 1', 'option 2', 'option 3'] 
+        },
+        {
+            'type': 'dropdown',
+            'question': 'question 3',
+            'options': ['option 1', 'option 2', 'option 3'] 
+        },
     ]
 }
 
@@ -18,7 +28,6 @@ if(localStorage.getItem('formData')){
     document.querySelector('.form-questionnaire-title-bar').value = data['form-title'];
     document.querySelector('.form-questionnaire-description-bar').value = data['form-description'];
     const form = document.querySelector('.form-questionnaire-area');
-    console.log(form.childElementCount)
     form.removeChild(form.lastElementChild);
     for(let tab of data['form-tabs']){
         const newTab = document.createElement('div');
@@ -32,15 +41,21 @@ if(localStorage.getItem('formData')){
             ${tabFooter}
         `;
         newTab.querySelector('.form-questionnaire-question-bar').value = tab.question;
-        if (tab.type === 'multiple-choice' || tab.type === 'checkboxes') {
-            const optionContainers = newTab.querySelectorAll('.form-questionnaire-option-container');
-            const baseOption = optionContainers[0];
-            const addOptionContainer = optionContainers[1];
-            baseOption.querySelector('.form-questionnaire-option-bar').value = tab.options[0];
-            for (let i = 1; i < tab.options.length; i++) {
-                const clonedOption = baseOption.cloneNode(true);
-                clonedOption.querySelector('.form-questionnaire-option-bar').value = tab.options[i];
-                addOptionContainer.parentNode.insertBefore(clonedOption, addOptionContainer);
+        newTab.firstElementChild.lastElementChild.value = tab.type;
+        const contentArea = newTab.querySelector('.form-questionnaire-tab-content-area');
+        if (tab.type === 'multiple-choice' || tab.type === 'checkboxes' || tab.type === 'dropdown' ) {
+            for(let option of tab.options){
+                const newOption = document.createElement('div');
+                newOption.classList.add('form-questionnaire-option-container');
+                newOption.innerHTML = templateOptionsMap[tab.type];
+                newOption.children[1].value = option;
+                contentArea.insertBefore(newOption , contentArea.lastElementChild);
+            }
+        }
+        if(tab.type === 'dropdown'){
+            let count = 1;
+            for(let option of contentArea.children){
+                option.firstElementChild.innerHTML = `${count++}.`
             }
         }
         form.appendChild(newTab);
